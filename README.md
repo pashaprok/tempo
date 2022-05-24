@@ -1,6 +1,3 @@
-# Pasha
-Pasha - tech assessent - deadline 22nd May 
-
 ## Initial setup
 
 Create .env file in root/back directory by .example.env template
