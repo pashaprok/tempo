@@ -1,0 +1,40 @@
+version: '3.8'
+
+services:
+  mysqldb:
+    image: mysql:5.7
+    restart: always
+    environment:
+      - MYSQL_USER=mysql
+      - MYSQL_PASSWORD=password
+      - MYSQL_ROOT_PASSWORD=password
+      - MYSQL_DATABASE=testdb
+    ports:
+      - '3306:3306'
+    volumes:
+      - db:/var/lib/mysql
+  back:
+    depends_on:
+      - mysqldb
+    build: ./back
+    restart: always
+    ports:
+      - '3033:3033'
+    networks:
+      - back
+  front:
+    depends_on:
+      - back
+    build: ./front
+    restart: always
+    ports:
+      - '3303:3303'
+    networks:
+      - front
+
+volumes:
+  db:
+
+networks:
+  back:
+  front:

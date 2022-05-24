@@ -1,0 +1,147 @@
+{
+	"info": {
+		"_postman_id": "b0cdd3e6-b416-4dc3-b150-37d77193a48b",
+		"name": "cryptoExchange",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "current",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"fromCurrency\": \"BTC\",\r\n    \"toCurrency\": \"USD\",\r\n    \"amountFrom\": 1\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{domain}}/exchange/current",
+					"host": [
+						"{{domain}}"
+					],
+					"path": [
+						"exchange",
+						"current"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "post exchange",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"fromCurrency\": \"BTC\",\r\n    \"fromAmount\": 1,\r\n    \"toCurrency\": \"USD\",\r\n    \"toAmount\": 38973.85318745835,\r\n    \"type\": \"Exchanged\",\r\n    \"time\": \"2022-05-02T05:44:29.4000000Z\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{domain}}/exchange",
+					"host": [
+						"{{domain}}"
+					],
+					"path": [
+						"exchange"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get exchanges",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{domain}}/exchange",
+					"host": [
+						"{{domain}}"
+					],
+					"path": [
+						"exchange"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "delete exchange",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"deleteId\": 2\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{domain}}/exchange",
+					"host": [
+						"{{domain}}"
+					],
+					"path": [
+						"exchange"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "domain",
+			"value": "localhost:3033",
+			"type": "string"
+		}
+	]
+}

@@ -1,0 +1,6 @@
+.page-not-found-content {
+    margin-top: 50vh;
+    transform: translateY(-50%);
+    text-align: center;
+    font-size: large;
+}

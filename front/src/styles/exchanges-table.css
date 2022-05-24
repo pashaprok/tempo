@@ -1,0 +1,49 @@
+.exchanges-table {
+    width: 100%;
+    margin-top: 45px;
+}
+
+.header {
+    box-sizing: border-box;
+    background-color: #eeeeee;
+
+}
+
+.heading {
+    padding: 4px 8px;
+    font-size: 14px;
+    font-weight: 400;
+    text-align: left;
+}
+
+.body {
+    padding: 16px 8px;
+}
+
+.heading.datetime {
+    cursor: pointer;
+    font-weight: 700;
+}
+
+tbody > tr:nth-child(even) {
+    background-color: #eeeeee;
+}
+
+.body.exchange-type {
+    font-weight: 700;
+}
+
+.live-price {
+    color: #5DBE7E;
+}
+
+.exchanged {
+    color: #6368DF;
+}
+
+.error-msg {
+    margin: 45px auto;
+    width: 100%;
+    text-align: center;
+    color: red;
+}

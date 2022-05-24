@@ -1,0 +1,54 @@
+.currency-exchange-form {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.form-part {
+    font-size: 14px;
+    line-height: 1.5;
+    display: flex;
+    flex-direction: column;
+}
+
+.form-part.down {
+    justify-content: flex-end;
+}
+
+.form-part.dropdown {
+    width: 200px;
+}
+
+.form-part.amount-input {
+    width: 160px;
+}
+
+.save-btn {
+    cursor: pointer;
+    padding: 14px 26px;
+    border-radius: 8px;
+    border: none;
+    outline: none;
+    background-color: #49CD5E;
+    color: #fff;
+}
+
+label {
+    color: #9C9C9C;
+    padding-bottom: 5px;
+}
+
+select, input {
+    padding: 12px 15px;
+    border-radius: 8px;
+    border: 1px solid #E0E0E0;
+}
+
+select:focus, input:focus {
+    outline: none;
+    background-color: #E0E0E0;
+}
+
+.equals {
+    padding: 12px 0;
+}
